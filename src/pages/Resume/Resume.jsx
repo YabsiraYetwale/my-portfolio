@@ -10,7 +10,9 @@ const Resume = () => {
         <h2 className="h2 article-title">Resume</h2>
       </header>
 
-      
+      <div>
+        <iframe src="https://drive.google.com/file/d/1viuuLLspACBSu1yMruXeJRgHcCYtF-DP/preview?usp=drivesdk"></iframe>
+      </div>
       
       <div className="skill">
         <h3 className="h3 skills-title">My skills</h3>
