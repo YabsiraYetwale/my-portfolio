@@ -10,32 +10,7 @@ const Resume = () => {
         <h2 className="h2 article-title">Resume</h2>
       </header>
 
-      <div className="timeline">
-        <div className="title-wrapper">
-          <div className="icon-box">
-            <FaBookReader />
-          </div>
-          <h3 className="h3">Education</h3>
-        </div>
-        <ol className="timeline-list">
-          <TimelineItem
-            title="University school of the arts"
-            date="2007 — 2008"
-            description="Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur."
-          />
-          <TimelineItem
-            title="New york academy of art"
-            date="2006 — 2007"
-            description="Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est omnis."
-          />
-          <TimelineItem
-            title="High school of art and design"
-            date="2002 — 2004"
-            description="Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur magni dolores eos."
-          />
-        </ol>
-      </div>
-
+      
       <div className="timeline">
         <div className="title-wrapper">
           <div className="icon-box">
