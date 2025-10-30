@@ -6,7 +6,7 @@ const Aside = () => {
         <div className="sidebar-info">
           <figure className="avatar-box">
             <img
-              src={"/images/my_photo.jpg"}
+              src={"/images/yabu.JPG"}
               alt="Yabsira Yetwale"
               width="80"
             />
