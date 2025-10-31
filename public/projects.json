@@ -12,7 +12,8 @@
       "title": "Cloth Shop Website",
       "category": "Web development",
       "image": "images/projects/cloth.png",
-      "github": "https://github.com/YabsiraYetwale/mernStack-eccomerce-app"
+      "github": "https://github.com/YabsiraYetwale/mernStack-eccomerce-app",
+      "live": "https://eccomerce-cloth-shop.netlify.app/"
 
     },
     {
