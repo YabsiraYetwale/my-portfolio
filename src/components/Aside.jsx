@@ -54,13 +54,16 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Phone</p>
 
-                <a href="tel:+12133522795" className="contact-link">
-                  +251926198491
+                <a href="tel:+251990003736" className="contact-link">
+                  +251990003736
                 </a>
+                {/* <a href="tel:+12133522795" className="contact-link">
+                  +251926198491
+                </a> */}
               </div>
             </li>
 
-            <li className="contact-item">
+            {/* <li className="contact-item">
               <div className="icon-box">
                 <GiCalendar/>
                
@@ -69,9 +72,9 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Birthday</p>
 
-                <time dateTime="2002-03-24">March 24, 2002</time>
+                <time dateTime="2002-03-25">March 25, 2002</time>
               </div>
-            </li>
+            </li> */}
 
             <li className="contact-item">
               <div className="icon-box">
@@ -82,7 +85,8 @@ const Aside = () => {
               <div className="contact-info">
                 <p className="contact-title">Location</p>
 
-                <address>Ethiopia,AddisAbaba,5kilo</address>
+                <address>Addis Ababa, Ethiopia</address>
+                {/* <address>Ethiopia,AddisAbaba,5kilo</address> */}
               </div>
             </li>
           </ul>

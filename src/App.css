@@ -1,5 +1,5 @@
 
-
+@import "tailwindcss";
 :root {
 
   /**
@@ -98,6 +98,61 @@
 
 }
 
+/* Light Mode Variables */
+[data-theme="light"] {
+  /* gradient */
+  --bg-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 95%) 3%, 
+    hsl(0, 0%, 98%) 97%
+  );
+  --bg-gradient-jet: linear-gradient(
+    to bottom right, 
+    hsla(0, 0%, 90%, 0.251) 0%, 
+    hsla(0, 0%, 98%, 0) 100%
+  ), hsl(0, 0%, 98%);
+  --bg-gradient-yellow-1: linear-gradient(
+    to bottom right, 
+    rgb(56 189 248) 0%, 
+    hsla(200, 96%, 70%, 0) 50%
+  );
+  --bg-gradient-yellow-2: linear-gradient(
+    135deg, 
+    hsla(200, 96%, 70%, 0.251) 0%, 
+    hsla(200, 96%, 68%, 0) 59.86%
+  ), hsl(0, 0%, 98%);
+  --border-gradient-onyx: linear-gradient(
+    to bottom right, 
+    hsl(0, 0%, 85%) 0%, 
+    hsla(0, 0%, 85%, 0) 50%
+  );
+  --text-gradient-yellow: linear-gradient(
+    to right, 
+    rgb(56 189 248)
+  );
+
+  /* solid */
+  --jet: hsl(0, 0%, 85%);
+  --onyx: hsl(0, 0%, 90%);
+  --eerie-black-1: hsl(0, 0%, 95%);
+  --eerie-black-2: rgb(248 250 252);
+  --smoky-black: rgb(241 245 249);
+  --white-1: hsl(0, 0%, 10%);
+  --white-2: hsl(0, 0%, 15%);
+  --orange-yellow-crayola: rgb(56 189 248);
+  --vegas-gold: hsl(200, 80%, 50%);
+  --light-gray: hsl(0, 0%, 30%);
+  --light-gray-70: hsla(0, 0%, 30%, 0.7);
+  --bittersweet-shimmer: hsl(15, 100%, 50%);
+
+  /* shadow - lighter shadows for light mode */
+  --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.08);
+  --shadow-2: 0 16px 30px hsla(0, 0%, 0%, 0.08);
+  --shadow-3: 0 16px 40px hsla(0, 0%, 0%, 0.08);
+  --shadow-4: 0 25px 50px hsla(0, 0%, 0%, 0.06);
+  --shadow-5: 0 24px 80px hsla(0, 0%, 0%, 0.08);
+}
+
 
 
 
@@ -138,11 +193,19 @@ input, textarea {
   color: var(--smoky-black);
 }
 
+[data-theme="light"] ::selection {
+  background: var(--orange-yellow-crayola);
+  color: var(--white-2);
+}
+
 :focus { outline-color: var(--orange-yellow-crayola); }
 
 html { font-family: var(--ff-poppins); }
 
-body { background: var(--smoky-black); }
+body { 
+  background: var(--smoky-black);
+  transition: background-color var(--transition-2);
+}
 
 
 
@@ -160,6 +223,7 @@ article {
   padding: 15px;
   box-shadow: var(--shadow-1);
   z-index: 1;
+  transition: background-color var(--transition-2), box-shadow var(--transition-2);
 }
 
 section{
@@ -167,6 +231,7 @@ section{
   /* border: 1px solid var(--jet); */
   padding: 15px;
   border-radius: 20px;
+  transition: background-color var(--transition-2);
 }
 
 .separator {
@@ -174,6 +239,7 @@ section{
   height: 1px;
   background: var(--jet);
   margin: 16px 0;
+  transition: background-color var(--transition-2);
 }
 
 .icon-box {
@@ -220,6 +286,7 @@ article.active {
 .h5 {
   color: var(--white-2);
   text-transform: capitalize;
+  transition: color var(--transition-2);
 }
 
 .h2 { font-size: var(--fs-1); }
@@ -445,8 +512,117 @@ main {
 
 
 /*-----------------------------------*\
+  #THEME TOGGLE TOP
+\*-----------------------------------*/
+
+.theme-toggle-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+.theme-toggle-btn-top {
+  color: var(--light-gray);
+  font-size: 24px;
+  /* padding: 12px; */
+  border-radius: 50%;
+  transition: var(--transition-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  cursor: pointer;
+  box-shadow: var(--shadow-2);
+  /* width: 48px;
+  height: 48px; */
+}
+
+.theme-toggle-btn-top:hover,
+.theme-toggle-btn-top:focus {
+  color: var(--orange-yellow-crayola);
+  background: var(--onyx);
+  transform: scale(1.1);
+}
+
+[data-theme="light"] .theme-toggle-btn-top {
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+}
+
+/* Adjust theme toggle position on desktop to avoid navbar overlap */
+@media (min-width: 1024px) {
+  .theme-toggle-container {
+    top: 15px;
+  }
+  .theme-toggle-btn-top {
+    padding: 12px;
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
+
+/* Hamburger button - visible on mobile only */
+.hamburger-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--orange-yellow-crayola);
+  color: var(--smoky-black);
+  border: none;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 6;
+  box-shadow: var(--shadow-3);
+  transition: var(--transition-1);
+}
+
+.hamburger-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-4);
+}
+
+.hamburger-btn:active {
+  transform: scale(0.95);
+}
+
+/* Overlay backdrop for mobile menu */
+.navbar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  backdrop-filter: blur(2px);
+}
+
+[data-theme="light"] .navbar-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Hide hamburger on larger screens */
+@media (min-width: 1024px) {
+  .hamburger-btn {
+    display: none;
+  }
+
+  .navbar-overlay {
+    display: none;
+  }
+}
 
 .navbar {
   position: fixed;
@@ -460,6 +636,44 @@ main {
   border-radius: 12px 12px 0 0;
   box-shadow: var(--shadow-2);
   z-index: 5;
+  transition: transform var(--transition-2), background-color var(--transition-2), border-color var(--transition-2);
+}
+
+/* Hide navbar on mobile by default, show when hamburger is clicked */
+@media (max-width: 1023px) {
+  .navbar {
+    transform: translateY(100%);
+  }
+
+  .navbar.navbar-open {
+    transform: translateY(0);
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .navbar-item {
+    width: 100%;
+  }
+
+  .navbar-link {
+    width: 100%;
+    padding: 16px 20px;
+    text-align: center;
+    border-bottom: 1px solid var(--jet);
+  }
+
+  .navbar-item:last-child .navbar-link {
+    border-bottom: none;
+  }
+}
+
+[data-theme="light"] .navbar {
+  background: hsla(0, 0%, 98%, 0.85);
+  border: 1px solid var(--jet);
 }
 
 .navbar-list {
@@ -524,6 +738,7 @@ main {
   border-radius: 14px;
   box-shadow: var(--shadow-2);
   z-index: 1;
+  
 }
 
 .service-item::before {
@@ -535,9 +750,11 @@ main {
   z-index: -1;
 }
 
-.service-icon-box { margin-bottom: 10px; }
+.service-icon-box {
+  flex-shrink: 0;
+}
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto;}
 
 .service-content-box { text-align: center; }
 
@@ -1625,6 +1842,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     border-radius: 0 20px;
     padding: 0 20px;
     box-shadow: none;
+    transform: translateY(0) !important; /* Always show on desktop */
   }
 
   .navbar-list {

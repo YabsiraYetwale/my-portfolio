@@ -35,6 +35,7 @@ const experience = [
   {
   title: "Internship",
   icon:"/images/ethernet.png",
+  targetLink:"https://ethernet.edu.et/",
   description1: `
       As an intern at EthERNet, an Ethiopian 
       company providing high-performance connectivity 
@@ -45,6 +46,17 @@ const experience = [
       work has involved utilizing technologies such as Next.js for 
       fast server-rendered React applications, Tailwind CSS for 
       efficient styling, and Shadcn for reusable UI components. `
+},
+  {
+  title: "Full Stack Developer - Amplitude Ventures",
+  targetLink:"https://amplitude.ventures/",
+  icon:"/images/amplitude.png",
+  description1: `
+      At Amplitude Ventures, I worked as a Full Stack Developer
+      building and maintaining end-to-end web applications with a
+      focus on performance, scalability, and clean UX.`,
+  description2: `Leveraged React/Next.js on the frontend and Django on the backend; integrated REST APIs, optimized database
+      queries, and contributed to CI/CD improvements.`
 },
 ];
 
@@ -129,11 +141,12 @@ const About = () => {
       <section className="">
         <h3 className="h3 service-title">Experience</h3>
 
-        <ul className="">
+        <ul className=" grid md:grid-cols-2 grid-cols-1 gap-6">
           {experience.map((ex, index) => (
             <Experience
               key={index}
               icon={ex.icon}
+              targetLink={ex.targetLink}
               title={ex.title}
               description1={ex.description1}
               description2={ex.description2}

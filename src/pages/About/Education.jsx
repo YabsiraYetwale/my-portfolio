@@ -12,6 +12,8 @@ const Education = ({ name, avatar,description1,description2 }) => {
           <p>{description2}</p>
           </div>
         </div>
+
+      
       </li>
     );
   }

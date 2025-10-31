@@ -1,11 +1,11 @@
 
 
-const Experience = ({ title, icon, description1,description2 }) => {
+const Experience = ({ title, icon, description1,description2,targetLink }) => {
     return (
-      <li className="service-item">
-        <div className="service-icon-box">
-          <a href="https://ethernet.edu.et/"  target="_blank">
-          <img src={icon} alt={`${title} icon`} width="60" />
+      <li className="service-item flex flex-col items-center justify-center">
+        <div className="">
+          <a href={targetLink}  target="_blank">
+          <img src={icon} alt={`${title} icon`} className="w-40 h-full object-cover"/>
           </a>
         </div>
         <div className="service-content-box">

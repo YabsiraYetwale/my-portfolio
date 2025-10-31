@@ -4,7 +4,7 @@ const Service = ({ title, icon, description }) => {
   return (
     <li className="service-item">
       <div className="service-icon-box">
-        <img src={icon} alt={`${title} icon`} width="40" />
+        <img src={icon} alt={`${title} icon`} className="object-cover"/>
       </div>
       <div className="service-content-box">
         <h4 className="h4 service-item-title">{title}</h4>
