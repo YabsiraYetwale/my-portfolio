@@ -1,57 +1,34 @@
 [
     {
       "id": 1,
-      "title": "Finance",
+      "title": "Tour Website",
       "category": "Web development",
-      "image": "images/project-1.jpg"
+      "image": "images/projects/tour.png",
+      "github": "https://github.com/YabsiraYetwale/MernStack-Tour-App",
+      "live": "https://tourwithyab.netlify.app/tours"
     },
     {
       "id": 2,
-      "title": "Orizon",
+      "title": "Cloth Shop Website",
       "category": "Web development",
-      "image": "images/project-2.png"
+      "image": "images/projects/cloth.png",
+      "github": "https://github.com/YabsiraYetwale/mernStack-eccomerce-app"
+
     },
     {
       "id": 3,
-      "title": "Fundo",
-      "category": "Web design",
-      "image": "images/project-3.jpg"
+      "title": "Invoice Management System",
+      "category": "Web development",
+      "image": "images/projects/invoice.png",
+      "github": "https://github.com/YabsiraYetwale/nextjs-nestjs-invoicesystm-app"
     },
     {
       "id": 4,
-      "title": "Brawlhalla",
-      "category": "Applications",
-      "image": "images/project-3.jpg"
-    },
-    {
-      "id": 5,
-      "title": "DSM.",
-      "category": "Web design",
-      "image": "images/project-5.png"
-    },
-    {
-      "id": 6,
-      "title": "MetaSpark",
-      "category": "Web design",
-      "image": "images/project-6.png"
-    },
-    {
-      "id": 7,
-      "title": "Summary",
+      "title": "Web Song",
       "category": "Web development",
-      "image": "images/project-7.png"
-    },
-    {
-      "id": 8,
-      "title": "Task Manager",
-      "category": "Applications",
-      "image": "images/project-8.jpg"
-    },
-    {
-      "id": 9,
-      "title": "Arrival",
-      "category": "Web development",
-      "image": "images/project-9.png"
+      "image": "images/projects/song.png",
+      "github": "https://github.com/YabsiraYetwale/MernStack-Song-App"
     }
+   
   ]
   

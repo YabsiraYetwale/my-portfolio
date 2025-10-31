@@ -38,7 +38,7 @@ const Portfolio = () => {
       </header>
 
       {/* Filter buttons */}
-      <ul className="filter-list">
+      {/* <ul className="filter-list">
         {['All', 'Web design', 'Applications', 'Web development'].map(category => (
           <li className="filter-item" key={category}>
             <button
@@ -50,7 +50,8 @@ const Portfolio = () => {
             </button>
           </li>
         ))}
-      </ul>
+      </ul> */}
+     
 
       {/* Portfolio items */}
       <section className="projects">
@@ -62,15 +63,16 @@ const Portfolio = () => {
               data-category={project.category}
               key={project.id}
             >
-           <a href="#l" target="_blank"> 
+           {/* <a href="#l" target="_blank"> 
            <img className="git" src='/images/git.svg' width="30" alt={project.title} loading="lazy"/>
-           </a>
-              <a href="#" target="_blank">
+           </a> */}
+              <a href={project.live ? project.live : project.github} target="_blank">
                 <figure className="project-img">
                   <div className="project-item-icon-box">
                     <FaRegEye />
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img
+                   src={project.image} alt={project.title} loading="lazy" />
                 </figure>
                 <div>
                 <h3 className="project-title">{project.title}</h3>
