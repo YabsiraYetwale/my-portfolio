@@ -25,7 +25,7 @@ const education = [
   {
     avatar: "/images/aau.png",
     name: `AddisAbaba Institute of Information Technology 
-    Bsc. in Software Engineering(Cyber Security) 2021 - `,
+    Bsc. in Software Engineering(Cyber Security) 2021 - 2025 `,
     description1: `⚡I have studied basic software engineering subjects like DS, Algorithms, DBMS, OS, CA, AI etc.`,
     
     description2:`⚡Apart from this, I have done courses on Cloud Computing and Full Stack Development.` 
@@ -57,6 +57,18 @@ const experience = [
       focus on performance, scalability, and clean UX.`,
   description2: `Leveraged React/Next.js on the frontend and Django on the backend; integrated REST APIs, optimized database
       queries, and contributed to CI/CD improvements.`
+},
+{
+  title: "Full Stack Developer - Foost",
+  targetLink:"https://www.thefoost.com/",
+  icon:"/images/foost-logo.svg",
+  description1: `
+      Foost is a sales-focused digital menu and AI-powered SaaS platform
+      developed for the restaurant and café industry. As a Full Stack Developer,
+      I played an active role in both front-end and back-end development of our product.`,
+  description2: `Worked with TypeScript, React.js and Node.js ecosystems; built RESTful APIs and databases
+  using PostgreSQL. Utilized Next.js, Vercel for deployment with
+  strong attention to UI/UX details.`
 },
 ];
 
