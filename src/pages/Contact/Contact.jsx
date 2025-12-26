@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import QRCode from '../../components/QRCode';
 
 const Contact = () => {
   const form = useRef();
@@ -60,6 +61,10 @@ const Contact = () => {
           <ToastContainer />
         </form>
 
+      </section>
+
+      <section className="qr-code-section-wrapper">
+        <QRCode />
       </section>
 
     </section>
