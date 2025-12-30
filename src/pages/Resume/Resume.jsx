@@ -10,8 +10,12 @@ const Resume = () => {
         <h2 className="h2 article-title">Resume</h2>
       </header>
 
-      <div>
-        <iframe src="https://drive.google.com/file/d/13o_XpNI1oili64xc_ge9hfUpZhqVp9KQ/preview?usp=drivesdk"></iframe>
+      <div className="resume-container">
+        <iframe
+          src="https://drive.google.com/file/d/13o_XpNI1oili64xc_ge9hfUpZhqVp9KQ/preview?usp=drivesdk"
+          className="resume-iframe"
+          title="Resume PDF"
+        ></iframe>
         {/* <iframe src="https://drive.google.com/file/d/1viuuLLspACBSu1yMruXeJRgHcCYtF-DP/preview?usp=drivesdk"></iframe> */}
       </div>
       
